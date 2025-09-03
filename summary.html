@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary - Personal Finance Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+        <nav>   
+         <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="add.html">Add Transaction</a></li>
+      <li><a href="view.html">View Transactions</a></li>
+      <li><a href="summary.html">Summary</a></li>
+    </ul>
+    </nav>
+    <h1>Summary</h1>
+    <p>Quick view of totals</p>
+        
+    <div class="summary-cards">
+        <div class="summary-card income">
+            <span class="label">Total Income</span>
+            <span class="value" id="totalIncome">$0.00</span>
+        </div>
+        
+        <div class="summary-card expense">
+            <span class="label">Total Expenses</span>
+            <span class="value" id="totalExpenses">$0.00</span>
+        </div>
+        
+        <div class="summary-card balance">
+            <span class="label">Balance</span>
+            <span class="value" id="balance">$0.00</span>
+        </div>
+    </div>
+    
+    <!-- Placeholder for future chart -->
+    <div class="chart-container">
+        <h3>Expense Breakdown</h3>
+        <canvas id="expenseChart" width="400" height="200"></canvas>
+        <p id="noDataMessage">No data to display yet. <a href="add.html">Add some transactions</a> to see charts.</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
