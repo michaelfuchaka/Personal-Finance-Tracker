@@ -142,4 +142,4 @@ Open source - use freely for personal or educational purposes.
 
 ---
 
-**Live Demo**: [ hosted URL here when deployed]
+**Live Demo**: [https://michaelfuchaka.github.io/Personal-Finance-Tracker/]
