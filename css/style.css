@@ -166,3 +166,277 @@ button:hover {
     background-color: #c0392b;
     box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
 }
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+tr:nth-child(even) {
+    background-color: #fdfdfd;
+}
+
+/* Amount styling */
+.amount-positive {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.amount-negative {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+/* Filter Section */
+.filter-section {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-section input,
+.filter-section select {
+    margin-bottom: 0;
+    max-width: 300px;
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.summary-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    border-left: 4px solid #3498db;
+}
+
+.summary-card.income {
+    border-left-color: #27ae60;
+}
+
+.summary-card.expense {
+    border-left-color: #e74c3c;
+}
+
+.summary-card.balance {
+    border-left-color: #3498db;
+}
+
+.summary-card .label {
+    display: block;
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.summary-card .value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.summary-card.income .value {
+    color: #27ae60;
+}
+
+.summary-card.expense .value {
+    color: #e74c3c;
+}
+
+.summary-card.balance .value {
+    color: #3498db;
+}
+
+/* Chart Container */
+.chart-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.chart-container h3 {
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+#expenseChart {
+    max-width: 100%;
+    height: auto;
+}
+
+#noDataMessage {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Home page specific */
+.home-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.home-content ul {
+    text-align: left;
+    max-width: 400px;
+    margin: 2rem auto;
+}
+
+.home-content li {
+    margin-bottom: 0.5rem;
+    padding-left: 1rem;
+}
+
+/* Success/Error Messages */
+.message {
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.message.success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .nav-links li {
+        margin: 0.25rem 0;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .filter-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-section input,
+    .filter-section select {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+    
+    form {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        padding: 0 10px;
+    }
+    
+    main {
+        padding: 1rem 10px;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    .summary-card .value {
+        font-size: 1.5rem;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, form, table, .summary-card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Hover effects for interactive elements */
+.summary-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;}
