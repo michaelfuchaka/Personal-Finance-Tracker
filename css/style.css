@@ -1,5 +1,5 @@
 /* Reset and base styles */
-{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -50,7 +50,7 @@ nav{
 
 }
 
-.nav-links a :hover{
+.nav-links a:hover{
     background-color: #34495e;
 }
 
@@ -60,7 +60,7 @@ nav{
 
 /* Main Content */
 main{
-    max-width: 1200px0;
+    max-width: 1200px;
     margin: 0 auto;
     padding:  2rem 20px;
 }
